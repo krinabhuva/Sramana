@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sramana — Your Peaceful Sanctuary</title>
+  <meta name="description" content="A free, open relaxation and wellness hub for stress, anxiety, and mental fatigue. No login. No stress. Just breathe." />
+  <meta property="og:title" content="Sramana — Your Peaceful Sanctuary" />
+  <meta property="og:description" content="No login. No stress. Just breathe." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☮</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-brand">
+      <span class="brand-icon">☮</span>
+      <span class="brand-name">Sramana</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#breathing" class="nav-link">Breathe</a></li>
+      <li><a href="#yoga" class="nav-link">Yoga</a></li>
+      <li><a href="#music" class="nav-link">Music</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Welcome to your sanctuary</p>
+      <h1 class="hero-heading">You deserve <em>peace.</em></h1>
+      <p class="hero-sub">No login. No stress. Just breathe.</p>
+      <a href="#breathing" class="btn-cta">Begin Your Journey</a>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- DAILY AFFIRMATIONS -->
+  <section class="section affirm-section" id="affirmations">
+    <div class="affirm-bg-orbs">
+      <div class="affirm-orb a1"></div>
+      <div class="affirm-orb a2"></div>
+    </div>
+    <div class="container">
+      <div class="affirm-wrap">
+        <span class="affirm-label">✦ Today's Affirmation</span>
+        <div class="affirm-card" id="affirmCard">
+          <div class="affirm-quote-mark">"</div>
+          <p class="affirm-text" id="affirmText"></p>
+          <p class="affirm-author" id="affirmAuthor"></p>
+        </div>
+        <div class="affirm-controls">
+          <div class="affirm-dots" id="affirmDots"></div>
+          <button class="btn-affirm" id="affirmNext">Next affirmation →</button>
+        </div>
+        <p class="affirm-hint">A new affirmation greets you every day 🌱</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BREATHING EXERCISE -->
+  <section class="section breathing-section" id="breathing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Guided Breathing</span>
+        <h2 class="section-title">Find Your Breath</h2>
+        <p class="section-desc">Choose a pattern and let each inhale and exhale restore you.</p>
+      </div>
+
+      <div class="breathing-modes">
+        <button class="mode-btn active" data-mode="calm">
+          <span class="mode-icon">🌙</span>
+          <span class="mode-label">Calm</span>
+          <span class="mode-pattern">4 · 7 · 8</span>
+        </button>
+        <button class="mode-btn" data-mode="energize">
+          <span class="mode-icon">☀️</span>
+          <span class="mode-label">Energize</span>
+          <span class="mode-pattern">4 · 4 · 4 · 4</span>
+        </button>
+        <button class="mode-btn" data-mode="sleep">
+          <span class="mode-icon">⭐</span>
+          <span class="mode-label">Sleep</span>
+          <span class="mode-pattern">2 · 4 · 6</span>
+        </button>
+      </div>
+
+      <div class="breathing-arena">
+        <div class="breath-rings">
+          <div class="breath-ring ring-3"></div>
+          <div class="breath-ring ring-2"></div>
+          <div class="breath-ring ring-1"></div>
+          <div class="breath-circle" id="breathCircle">
+            <div class="breath-inner">
+              <span class="breath-phase" id="breathPhase">Ready</span>
+              <span class="breath-count" id="breathCount">—</span>
+            </div>
+          </div>
+        </div>
+        <p class="breath-instruction" id="breathInstruction">Press Start to begin your breathing session</p>
+
+        <div class="breathing-controls">
+          <button class="btn-breath" id="breathStart">Start</button>
+          <div class="cycle-counter">Cycles completed: <strong id="cycleCount">0</strong></div>
+        </div>
+      </div>
+
+      <div class="breathing-tips">
+        <div class="tip-card">
+          <span class="tip-icon">💫</span>
+          <p>Breathe through your nose for deeper calm</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-icon">🌿</span>
+          <p>Sit with your spine gently upright</p>
+        </div>
+        <div class="tip-card">
+          <span class="tip-icon">✨</span>
+          <p>Close your eyes and let go</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- YOGA POSES LIBRARY -->
+  <section class="section yoga-section" id="yoga">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Yoga Library</span>
+        <h2 class="section-title">Move With Intention</h2>
+        <p class="section-desc">Poses that nurture your body and calm your mind.</p>
+      </div>
+
+      <div class="yoga-filters">
+        <button class="filter-btn active" data-filter="all">All Poses</button>
+        <button class="filter-btn" data-filter="stress">Stress Relief</button>
+        <button class="filter-btn" data-filter="flexibility">Flexibility</button>
+        <button class="filter-btn" data-filter="strength">Strength</button>
+        <button class="filter-btn" data-filter="sleep">Sleep</button>
+      </div>
+
+      <div class="yoga-grid" id="yogaGrid">
+        <!-- Injected by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- POSE MODAL -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
+    <div class="modal" id="poseModal">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <div class="modal-pose-art" id="modalArt"></div>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <div class="modal-tags" id="modalTags"></div>
+      <p class="modal-benefit" id="modalBenefit"></p>
+      <h4 class="modal-steps-label">Step by step</h4>
+      <ol class="modal-steps" id="modalSteps"></ol>
+      <div class="modal-tip-box" id="modalTip"></div>
+    </div>
+  </div>
+
+  <!-- MUSIC & AUDIO PLAYER -->
+  <section class="section music-section" id="music">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Healing Sounds</span>
+        <h2 class="section-title">Rest Your Mind</h2>
+        <p class="section-desc">Curated playlists to carry you into stillness.</p>
+      </div>
+
+      <div class="playlist-tabs">
+        <button class="playlist-tab active" data-playlist="0">🌿 Nature</button>
+        <button class="playlist-tab" data-playlist="1">🧘 Meditation</button>
+        <button class="playlist-tab" data-playlist="2">🌙 Sleep</button>
+        <button class="playlist-tab" data-playlist="3">🎶 Ambient</button>
+      </div>
+
+      <div class="music-player-card">
+        <div class="player-visual">
+          <div class="vinyl-wrap">
+            <div class="vinyl" id="vinyl">
+              <div class="vinyl-groove v1"></div>
+              <div class="vinyl-groove v2"></div>
+              <div class="vinyl-groove v3"></div>
+              <div class="vinyl-center"></div>
+            </div>
+          </div>
+          <div class="player-meta">
+            <p class="now-playing-label">Now Playing</p>
+            <h3 class="track-title" id="trackTitle">Nature Sounds Collection</h3>
+            <p class="track-sub" id="trackSub">Peaceful sounds from nature's heart</p>
+          </div>
+        </div>
+        <div class="youtube-container">
+          <iframe
+            id="ytFrame"
+            width="100%"
+            height="300"
+            src="https://www.youtube.com/embed/1ZYbU82GVz4"
+            title="Meditation"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p class="player-note">Press ▶ in the player to begin. Each playlist is hand-curated for your peace.</p>
+      </div>
+
+      <div class="mood-cards-grid">
+        <div class="mood-card" data-playlist="0">
+          <div class="mood-icon">🌊</div>
+          <h4>Ocean Waves</h4>
+          <p>Let the tide carry your worries away</p>
+        </div>
+        <div class="mood-card" data-playlist="1">
+          <div class="mood-icon">🏔️</div>
+          <h4>Mountain Stillness</h4>
+          <p>Rise above the noise of daily life</p>
+        </div>
+        <div class="mood-card" data-playlist="2">
+          <div class="mood-icon">🌙</div>
+          <h4>Dream Garden</h4>
+          <p>Drift gently into peaceful sleep</p>
+        </div>
+        <div class="mood-card" data-playlist="3">
+          <div class="mood-icon">✨</div>
+          <h4>Cosmic Flow</h4>
+          <p>Float through soft ambient frequencies</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">
+        <span class="brand-icon">☮</span>
+        <span class="brand-name">Sramana</span>
+      </div>
+      <p class="footer-msg">Made with love for every tired soul seeking peace.</p>
+      <p class="footer-note">Free · Open · No login · Always here for you 🌿</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
