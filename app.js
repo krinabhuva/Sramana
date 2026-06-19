@@ -660,3 +660,48 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mood cards initial active
   document.querySelectorAll('.mood-card')[0]?.classList.add('active');
 });
+
+let currentLang = "en";
+
+const langBtn = document.getElementById("langBtn");
+
+langBtn.addEventListener("click", () => {
+
+  if(currentLang === "en"){
+
+    currentLang = "gu";
+
+    document.getElementById("welcomeText").textContent =
+      "તમારા શાંતિના સ્થાનમાં સ્વાગત છે";
+
+    document.getElementById("heroTitle").innerHTML =
+      "તમે <em>શાંતિ</em> ના હકદાર છો";
+
+    document.getElementById("heroSub").textContent =
+      "લોગિન નહીં. તણાવ નહીં. ફક્ત શ્વાસ લો.";
+
+    document.getElementById("journeyBtn").textContent =
+      "તમારી યાત્રા શરૂ કરો";
+
+    langBtn.textContent = "English";
+
+  }else{
+
+    currentLang = "en";
+
+    document.getElementById("welcomeText").textContent =
+      "Welcome to your sanctuary";
+
+    document.getElementById("heroTitle").innerHTML =
+      "You deserve <em>peace.</em>";
+
+    document.getElementById("heroSub").textContent =
+      "No login. No stress. Just breathe.";
+
+    document.getElementById("journeyBtn").textContent =
+      "Begin Your Journey";
+
+    langBtn.textContent = "ગુજરાતી";
+  }
+
+});
